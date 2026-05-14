@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+nav{
+    background:#111827;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    color:#555;
+}
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:8px;
+    margin:10px;
+}
+
+.dark-btn{
+    background:#111827;
+}
+
+.auth-container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.auth-card{
+    width:400px;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.auth-card h1{
+    margin-bottom:25px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.dashboard-container{
+    padding:40px;
+}
+
+.note-form{
+    margin:30px 0;
+}
+
+.notes-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(300px,1fr));
+
+    gap:20px;
+}
+
+.note-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.note-card h2{
+    margin-bottom:15px;
+}
+
+.note-buttons{
+    margin-top:20px;
+}
+
+.note-buttons a{
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:10px 16px;
+    border-radius:6px;
+    margin-right:10px;
+}
+
+.admin-container{
+    padding:40px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    margin:20px 0;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:15px;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.error-message{
+    background:#fee2e2;
+    color:#dc2626;
+    padding:12px;
+    border-radius:8px;
+    margin-bottom:15px;
+    text-align:center;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        NoteVault
+    </div>
+
+    <div>
+        <a href="/logout">Logout</a>
+    </div>
+
+</nav>
+
+<div class="dashboard-container">
+
+    <h1>Welcome {{ username }}</h1>
+
+    <form method="GET">
+
+        <input
+            type="text"
+            name="search"
+            placeholder="Search Notes..."
+        >
+
+    </form>
+
+    <div class="note-form">
+
+        <form method="POST">
+
+            <input
+                type="text"
+                name="title"
+                placeholder="Note Title"
+                required
+            >
+
+            <textarea
+                name="content"
+                placeholder="Write your note..."
+                required
+            ></textarea>
+
+            <button type="submit">
+                Add Note
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="notes-grid">
+
+        {% for note in notes %}
+
+        <div class="note-card">
+
+            <h2>{{ note.title }}</h2>
+
+            <p>{{ note.content }}</p>
+
+            <div class="note-buttons">
+
+                <a href="/edit/{{ note.id }}">
+                    Edit
+                </a>
+
+                <a href="/delete/{{ note.id }}">
+                    Delete
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

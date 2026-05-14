@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        Admin Dashboard
+    </div>
+
+    <div>
+        <a href="/logout">Logout</a>
+    </div>
+
+</nav>
+
+<div class="admin-container">
+
+    <h1>All Users</h1>
+
+    <table>
+
+        <tr>
+            <th>Username</th>
+        </tr>
+
+        {% for user in users %}
+
+        <tr>
+            <td>{{ user.username }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <h1>All Notes</h1>
+
+    <table>
+
+        <tr>
+            <th>Username</th>
+            <th>Title</th>
+            <th>Content</th>
+        </tr>
+
+        {% for note in notes %}
+
+        <tr>
+            <td>{{ note.username }}</td>
+            <td>{{ note.title }}</td>
+            <td>{{ note.content }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>
