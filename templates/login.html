@@ -21,6 +21,8 @@
 
 <body>
 
+    <!-- LOGIN CONTAINER -->
+
     <div class="auth-container">
 
         <div class="auth-card">
@@ -28,10 +30,10 @@
             <h1>Welcome Back</h1>
 
             <p class="subtitle">
-                Login to continue
+                Login to continue to NoteVault
             </p>
 
-            <!-- FLASH MESSAGE -->
+            <!-- FLASH MESSAGES -->
 
             {% with messages = get_flashed_messages() %}
 
@@ -39,8 +41,10 @@
 
                     {% for message in messages %}
 
-                        <div class="error-message">
+                        <div class="flash-message">
+
                             {{ message }}
+
                         </div>
 
                     {% endfor %}
@@ -49,34 +53,62 @@
 
             {% endwith %}
 
+            <!-- LOGIN FORM -->
+
             <form method="POST">
+
+                <!-- USERNAME -->
 
                 <input
                     type="text"
                     name="username"
                     placeholder="Enter Username"
+                    minlength="4"
                     required
                 >
 
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Enter Password"
-                    required
-                >
+                <!-- PASSWORD -->
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Enter Password"
+                        minlength="6"
+                        required
+                    >
+
+                    <span
+                        class="toggle-password"
+                        onclick="togglePassword()"
+                    >
+                        👁
+                    </span>
+
+                </div>
+
+                <!-- BUTTON -->
 
                 <button type="submit">
+
                     Login
+
                 </button>
 
             </form>
+
+            <!-- FOOTER -->
 
             <div class="auth-footer">
 
                 Don't have an account?
 
                 <a href="/register">
+
                     Register
+
                 </a>
 
             </div>
@@ -84,6 +116,31 @@
         </div>
 
     </div>
+
+    <!-- PASSWORD TOGGLE SCRIPT -->
+
+    <script>
+
+        function togglePassword(){
+
+            const password =
+                document.getElementById("password");
+
+            if(password.type === "password"){
+
+                password.type = "text";
+
+            }
+
+            else{
+
+                password.type = "password";
+
+            }
+
+        }
+
+    </script>
 
 </body>
 

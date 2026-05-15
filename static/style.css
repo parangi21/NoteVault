@@ -119,11 +119,15 @@ button{
     gap:20px;
 }
 
-.note-card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+.note-card p{
+
+    white-space: pre-wrap;
+
+    word-wrap: break-word;
+
+    line-height: 1.7;
+
+    margin-top: 15px;
 }
 
 .note-card h2{
@@ -172,4 +176,107 @@ table td{
     border-radius:8px;
     margin-bottom:15px;
     text-align:center;
+}
+.subtitle{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.flash-message{
+
+    background:#fee2e2;
+    color:#dc2626;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+    font-weight:bold;
+}
+
+.auth-footer{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    color:#555;
+}
+
+.auth-footer a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+.subtitle{
+
+    color:#666;
+
+    margin-bottom:20px;
+}
+
+.flash-message{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+    font-weight:bold;
+}
+
+.auth-footer{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    color:#555;
+}
+
+.auth-footer a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.password-box{
+
+    position:relative;
+}
+
+.toggle-password{
+
+    position:absolute;
+
+    right:15px;
+
+    top:15px;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+textarea{
+
+    min-height: 140px;
+
+    resize: vertical;
 }

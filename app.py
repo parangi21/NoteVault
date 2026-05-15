@@ -38,7 +38,7 @@ app.secret_key = "secret123"
 # ADMIN CREDENTIALS
 
 ADMIN_USERNAME = "Parshan"
-ADMIN_PASSWORD = "18may"
+ADMIN_PASSWORD = "18_may26"
 
 # HOME PAGE
 
